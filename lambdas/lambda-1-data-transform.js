@@ -5,8 +5,6 @@ const filePath = 'S3/banklist-sheet-sorted.csv';
 const outputData = [];
 
 function dataTransformer() {
-  
-
 
   return new Promise((resolve, reject) => {
  
@@ -19,7 +17,7 @@ function dataTransformer() {
       })
       .on('end', () => {
         resolve(outputData);
-        writeFileSync('S3/banklist-sheet.json',JSON.stringify(outputData));
+        writeFileSync('S3/transformedData.json',JSON.stringify(outputData));
         console.log("success");
 
         

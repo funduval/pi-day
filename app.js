@@ -1,1 +1,1 @@
-const data = [{"﻿Bank Name":"Bank of Honolulu","State":"HI","Date":"13-Oct-00"},{"﻿Bank Name":"National State Bank of Metropolis","State":"IL","Date":"14-Dec-00"},{"﻿Bank Name":"First Alliance Bank & Trust Co.","State":"NH","Date":"2-Feb-01"}]
+"let data = [object Object],[object Object],[object Object]"
