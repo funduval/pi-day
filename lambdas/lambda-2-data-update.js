@@ -24,17 +24,17 @@ async function updateHtml() {
     })
 
     // Read the contents of the HTML file
-    let textData = await fs.readFile('index.html', 'utf8');
+    // let textData = await fs.readFile('index.html', 'utf8');
       let stringifiedData = JSON.stringify("const data = " + outputData)
       let parsedData = JSON.parse(stringifiedData);
    
 
     // Update the contents of the HTML file
-      let updatedData = textData.replace(regex, `<script id="data">${parsedData}</script>`);
+      // let updatedData = textData.replace(regex, `<script id="data">${parsedData}</script>`);
 
 
     // Write the updated contents back to the same file
-    await fs.writeFile('index.html', updatedData, 'utf8');
+    await fs.writeFile('app.js', parsedData, 'utf8');
 
     console.log('The file has been updated!');
   } catch (err) {
