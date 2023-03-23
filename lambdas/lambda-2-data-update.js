@@ -9,7 +9,7 @@ import dataTransformer from './lambda-1-data-transform.js';
 async function updateHtml() {
   try {
 
-    await dataTransformer();
+    let transform = await dataTransformer();
 
     const regex = /<script\b[^<]*(?:(?!<\/script >)<[^<]*)*>([\s\S]*?)<\/script>/g;
   

@@ -1,6 +1,1 @@
-var data = [{name: "Alex", share: 20.70},
-{name: "Shelly", share: 20.92},
-{name: "Clark", share: 25.42},
-{name: "Matt", share: 23.65},
-{name: "Jolene", share: 9.31}];
-
+const data = [{"﻿Bank Name":"Bank of Honolulu","State":"HI","Date":"13-Oct-00"},{"﻿Bank Name":"National State Bank of Metropolis","State":"IL","Date":"14-Dec-00"},{"﻿Bank Name":"First Alliance Bank & Trust Co.","State":"NH","Date":"2-Feb-01"}]
