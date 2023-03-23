@@ -1,5 +1,5 @@
 import { csvParseRows } from "d3";
-import readFile from './file-service/file-parser.js';
+import readFile from './lambdas/lambda-file-parser.js';
 console.log("readFile", readFile);
 const data = readFile.readFile()
   .then((myObject) => {

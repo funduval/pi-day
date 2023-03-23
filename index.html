@@ -6,6 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+    
+    var data = [{name: "Alex", share: 20.70},
+        {name: "Shelly", share: 60.92},
+        {name: "Clark", share: 5.42},
+        {name: "Matt", share: 3.65},
+        {name: "Jolene", share: 9.31}];
+        
+    </script>
     <script type="module">
 
             import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
@@ -18,11 +27,7 @@
             radius = 200;
 
             // Step 1
-            var data = [{name: "Alex", share: 20.70},
-            {name: "Shelly", share: 60.92},
-            {name: "Clark", share: 5.42},
-            {name: "Matt", share: 3.65},
-            {name: "Jolene", share: 9.31}];
+            
 
             var g = svg.append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
@@ -63,14 +68,11 @@
             .style("font-family", "arial")
             .style("font-size", 15);
     </script>
-
-
-
     </script>
 </head>
 <body>
     <div style="display:flex">
-        <div style="align-content: center">
+        <div style="align-content: center;justify-content:center">
             <svg width="500" height="400">
 
             </svg>
