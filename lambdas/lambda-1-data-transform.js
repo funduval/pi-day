@@ -1,11 +1,15 @@
 import fs, { writeFile, writeFileSync } from 'fs';
 import csv from 'csv-parser';
-import { builtinModules } from 'module';
 
+
+
+function dataTransformer () {
+  
 const filePath = 'S3/banklist-sheet-sorted.csv';
+const outputData = [];
 function readFile(){
   return new Promise((resolve, reject) => {
-  const outputData=[];
+  // const outputData=[];
  
   fs.createReadStream(filePath)
   .pipe(csv())
@@ -24,8 +28,8 @@ function readFile(){
 })
 }
 
-readFile();
+}
 
-// export default {
-//   readFile,
-// };
+
+
+export default dataTransformer
