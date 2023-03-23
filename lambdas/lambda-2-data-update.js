@@ -1,3 +1,10 @@
+import fs, { writeFile, writeFileSync, readFileSync } from 'fs';
+import csv from 'csv-parser';
+import { builtinModules } from 'module';
+
+const outputData = [];
+
+
 fs.readFileSync('./index.html', 'utf8', function(err, data) {
   if (err) throw err;
   const regex = /<script\b[^<]*(?:(?!<\/script >)<[^<]*)*>([\s\S]*?)<\/script>/g;
