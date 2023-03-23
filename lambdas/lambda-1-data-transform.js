@@ -2,7 +2,8 @@ import fs, { writeFile, writeFileSync } from 'fs';
 import csv from 'csv-parser';
 
 const filePath = 'S3/pie-list.csv';
-const outputData = [];
+const outputData = {};
+const outputArray = [];
 
 function dataTransformer() {
 
@@ -12,20 +13,19 @@ function dataTransformer() {
       .pipe(csv())
       .on('data', (row) => {
         let output = {};
-        outputData.push(row);
+        outputArray.push(row);
         
       })
       .on('end', () => {
-        resolve(outputData);
-        writeFileSync('S3/transformedData.json',JSON.stringify(outputData));
+        resolve(outputArray);
         console.log("success");
+        outputData["someData"] = outputArray;
+        writeFileSync('S3/transformedData.json',JSON.stringify(outputData));
+
 
         
       });
     })
   }
-
-
-
 
 export default dataTransformer

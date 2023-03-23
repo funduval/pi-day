@@ -11,25 +11,39 @@ async function updateHtml() {
     let transform = await dataTransformer();
 
 // Read the contents of the JSON file
-    let read = await jsonfile.readFileSync('./S3/transformedData.json', 'utf8');
-console.log(read);
+    //let read = await jsonfile.readFileSync('./S3/transformedData.json', 'utf8');
+//console.log(read);
 // make sure tyhe JSON is in a format readable in a JS file
-const jsonData = read;
+//const jsonData = read;
 
 // Convert the JavaScript object to a string with the variable assignment
-const jsData = `const data = ${JSON.stringify(jsonData)};`;
+//const jsData = `const data = ${JSON.stringify(jsonData)};`;
       
-// Write the updated contents to the app.js file 
+// Write the updated contents to the pie-data.js file 
 
-    let write = await jsonfile.writeFileSync('app.js', jsonData)
-      
+      //let write = await jsonfile.writeFileSync('pie-data.js', jsData);
+
+
+
+      const rawData = jsonfile.readFileSync('./S3/transformedData.json');
+      console.log('raw', rawData);
+
+      const stringifiedData = `const data = ${rawData};`;
+
+      console.log('stringified', stringifiedData);
     
+      //jsonfile.writeFileSync('pie-data.js', stringifiedData); 
+      
+      
+
 
   } catch (error) {
     console.error('An error occurred:', error);
 
   }
 // Update the contents of the HTML file
+
+//regex for everything between body tags
 
     // const regex = /<script\b[^<]*(?:(?!<\/script >)<[^<]*)*>([\s\S]*?)<\/script>/g;
 
