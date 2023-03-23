@@ -6,12 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="app.js"></script>
+    <script src="app.js" type="module">
+        
+    </script>
     <script type="module">
+            let rawData = window["data"];
+           
+            
 
             import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
             const div = d3.selectAll("div"), display = "flex";
-
+            console.log(rawData);
             // Step 3
             var svg = d3.select("svg"),
             width = svg.attr("width"),

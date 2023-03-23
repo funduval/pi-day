@@ -1,7 +1,7 @@
 import fs, { writeFile, writeFileSync } from 'fs';
 import csv from 'csv-parser';
 
-const filePath = 'S3/banklist-sheet-sorted.csv';
+const filePath = 'S3/pie-list.csv';
 const outputData = [];
 
 function dataTransformer() {

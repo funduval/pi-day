@@ -12,13 +12,18 @@ async function updateHtml() {
 
 // Read the contents of the JSON file
     let read = await jsonfile.readFileSync('./S3/transformedData.json', 'utf8');
+console.log(read);
+// make sure tyhe JSON is in a format readable in a JS file
+const jsonData = read;
+
+// Convert the JavaScript object to a string with the variable assignment
+const jsData = `const data = ${JSON.stringify(jsonData)};`;
       
 // Write the updated contents to the app.js file 
 
-    let write = await jsonfile.writeFileSync('app.js', 'let data = ' + read)
+    let write = await jsonfile.writeFileSync('app.js', jsonData)
       
-    console.log('The JSON file has been updated in app.js!');
-    console.log('All functions completed successfully:', transform, read, write);
+    
 
   } catch (error) {
     console.error('An error occurred:', error);
