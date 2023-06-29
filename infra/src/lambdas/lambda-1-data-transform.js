@@ -2,7 +2,8 @@ import fs, { writeFile, writeFileSync } from 'fs';
 import csv from 'csv-parser';
 
 //const filePath = `./${process.argv[2]}`;
-const filePath = './S3/banklist-sheet-sorted-15.csv'
+const filePath = 'infra/src/S3/category_level_count.csv'
+
 console.log(filePath);
 const outputData = {};
 const outputArray = [];
@@ -21,8 +22,8 @@ function dataTransformer() {
       .on('end', () => {
         resolve(outputArray);
         console.log("success");
-        outputData["someData"] = outputArray;
-        writeFileSync('S3/transformedData.json', JSON.stringify(outputData));
+        outputData["data"] = outputArray;
+        writeFileSync('./infra/src/S3/categoryTransformed.json', JSON.stringify(outputData));
 
 
 

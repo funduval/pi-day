@@ -1,0 +1,24 @@
+record,category,category_count,percent
+0,Application,19008,51
+1,End User Asset,4152,11
+2,Server,4046,10
+3,VMWare,3233,8
+4,Network,2036,5
+5,Peripheral System,1687,4
+6,Database Instance,1294,3
+7,Service,726,1
+8,Security Devices,302,0
+9,System Software,142,0
+10,Telephony Equipment,105,0
+11,Cluster,48,0
+12,Storage Device,44,0
+13,Database Server,42,0
+14,Application Server,32,0
+15,Storage Networks,20,0
+16,Mainframe,15,0
+17,Database,14,0
+18,VDI,10,0
+19,General,7,0
+20,Data Center,3,0
+21,HyperV,3,0
+22,Resource,2,0
